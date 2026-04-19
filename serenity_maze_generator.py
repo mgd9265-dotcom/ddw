@@ -142,8 +142,8 @@ pdf_path=os.path.join(outdir,'sleep-qr-pack.pdf')
 doc=SimpleDocTemplate(pdf_path,pagesize=A4,rightMargin=36,leftMargin=36,topMargin=36,bottomMargin=36)
 story=[]
 
-# QR code to html file path (works locally after opening shared artifact page path not guaranteed; provide editable field too)
-qr_url='serenity-maze.html'
+# QR code now points to GitHub Pages live URL
+qr_url='https://mgd9265-dotcom.github.io/ddw/'
 img=qrcode.make(qr_url)
 qr_png=os.path.join(outdir,'qr.png')
 img.save(qr_png)
@@ -156,7 +156,7 @@ story.append(Paragraph('ملف مكمّل لكتاب النوم الرقمي: ي
 story.append(Spacer(1,18))
 story.append(Image(qr_png, width=180, height=180))
 story.append(Spacer(1,12))
-story.append(Paragraph('مهم: هذا الكود موجّه حاليًا إلى ملف الصفحة التفاعلية المرفق معك ضمن نفس الحزمة. إذا أردت استخدامه للبيع الفعلي، ارفع صفحة HTML على رابطك النهائي ثم أعد توليد QR بالرابط العام.', styles['SmallAr']))
+story.append(Paragraph('هام: هذا الكود يشير مباشرة إلى النسخة المباشرة على GitHub Pages. يمكنك نسخه واستخدامه فوراً. للتخصيص الكامل، عدّل الرابط ليشير إلى استضافتك الخاصة.', styles['SmallAr']))
 story.append(Spacer(1,18))
 
 rows=[['العنصر','الوصف'],['اسم التجربة','متاهة الـ 15 دقيقة'],['نوعها','صفحة تفاعلية ليلية تعمل على الجوال والمتصفح'],['فكرتها','عداد 15 دقيقة + سؤال تفاعلي + رسالة تهدئة + مكافأة صوتية'],['أفضل مكان لها','نهاية فصل الخطة أو كهدية إضافية داخل المنتج'],['هوية الألوان','كحلي داكن + ذهبي هادئ + لمسة تركواز مطمئنة']]
