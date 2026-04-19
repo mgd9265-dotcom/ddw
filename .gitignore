@@ -1,8 +1,9 @@
-# Generated outputs
-output/
+# Generated outputs (track for deployment)
+# output/
 *.pyc
 __pycache__/
 .venv/
 *.egg-info/
 dist/
 build/
+

@@ -1,0 +1,8 @@
+[build]
+  publish = "output"
+
+[[redirects]]
+  from = "/"
+  to = "/serenity-maze.html"
+  status = 200
+
